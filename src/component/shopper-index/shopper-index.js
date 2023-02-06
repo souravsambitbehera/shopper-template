@@ -1,5 +1,6 @@
 import { Route,BrowserRouter,Routes,Form, Link } from "react-router-dom";
 import ShopperCategory from "../shopper-category/shopper-category";
+import ShopperDetails from "../shopper-details/shopper-details";
 import ShopperHome from "../shopper-home/shopper-home";
 
 
@@ -38,6 +39,7 @@ const ShopperIndex = () => {
             <Route path="home" element={<ShopperHome />} />
 
             <Route path="category/:catname" element={<ShopperCategory />} />
+            <Route path="details/:id" element={<ShopperDetails/>} />
 
 
             

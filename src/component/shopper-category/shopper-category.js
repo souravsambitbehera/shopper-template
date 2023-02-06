@@ -1,12 +1,12 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
 const ShopperCategory = () => {
     const[products,setProducts] = useState([])
     const params = useParams()
-
+    
     useEffect( () =>
         {
             axios.get(`https://fakestoreapi.com/products/category/${params.catname}`)
@@ -32,7 +32,7 @@ const ShopperCategory = () => {
                         </p>
                 </div>
                 <div className='card-footer'>
-                    <button className='btn btn-primary w-100'>Details</button>
+                    <Link to={`/details/${product.id}`} className='btn btn-primary w-100'>Details</Link>
 
                 </div>
             </div> )
