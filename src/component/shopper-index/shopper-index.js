@@ -2,6 +2,10 @@ import { Route,BrowserRouter,Routes,Form, Link } from "react-router-dom";
 import ShopperCategory from "../shopper-category/shopper-category";
 import ShopperDetails from "../shopper-details/shopper-details";
 import ShopperHome from "../shopper-home/shopper-home";
+import ShopperInvalid from "../shopper-invalid/shopper-invalid";
+import ShopperLogin from "../shopper-login/shopper-login";
+import ShopperRegister from "../shopper-register/shopper-register";
+
 
 
 const ShopperIndex = () => {
@@ -16,6 +20,8 @@ const ShopperIndex = () => {
                 </div>
                 <nav className="d-flex">
                     <div className="me-3"><Link to="home" className="btn">HOME</Link></div>
+                    <div className="me-3"><Link to="register" className="btn">REGISTER</Link></div>
+
                     <div className="me-3"><Link to="category/men's clothing" className="btn">MEN'S FASHION</Link></div>
                     <div className="me-3"><Link to="category/women's clothing" className="btn">WOMEN'S FASHION</Link></div>
                     <div className="me-3"><Link to="category/jewelery" className="btn">JEWELERY</Link></div>
@@ -40,6 +46,10 @@ const ShopperIndex = () => {
 
             <Route path="category/:catname" element={<ShopperCategory />} />
             <Route path="details/:id" element={<ShopperDetails/>} />
+            <Route path="register" element={<ShopperRegister/>} />
+            <Route path="login" element={<ShopperLogin/>} />
+            <Route path="invalid" element={<ShopperInvalid/>} />
+
 
 
             
