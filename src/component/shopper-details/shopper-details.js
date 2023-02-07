@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 const ShopperDetails = () => {
@@ -29,6 +29,10 @@ const ShopperDetails = () => {
                     <dd><span className='bi bi-star-fill text-success'></span>{product.rating.rate}[{product.rating.count}]</dd>
                 </dl>
             </div>
+        </div>
+        <div> 
+        <Link to={`/category/${product.category}`} className='btn btn-primary'>Go back to {product.category}</Link>
+
         </div>
     </>
   )
