@@ -8,6 +8,7 @@ import ShopperIndex from './component/shopper-index/shopper-index';
 // import react cookie
 import {CookiesProvider} from 'react-cookie'
 import UseContext from './component/use-context/use-context';
+import UseReducerDemo from './component/use-reducer/use-reducer-demo';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,7 +16,7 @@ root.render(
     {/* <App /> */}
     {/* Must use cookiesProvider  */}
     <CookiesProvider>
-    <UseContext/>
+    <UseReducerDemo/>
     </CookiesProvider>
   </React.StrictMode>
 );
