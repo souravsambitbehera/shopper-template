@@ -3,9 +3,9 @@ let express = require("express");
 let cors = require("cors");
 const { request, response } = require("express");
 
-let connectingString = "mongodb://127.0.0.1:27017"
+let connectingString = "mongodb://127.0.0.1:27017";
 
-let app = express()
+let app = express();
 
 app.use(cors());
 app.use(express.urlencoded({
